@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 8082;
 
-var cors = require("cors");
+const cors = require("cors");
 
 app.use(cors());
 
@@ -54,17 +54,18 @@ app.get("/books/:id", (req, res) => {
 //create book
 app.post("/books", (req, res) => {
   console.log(req.body);
+
   const newPost = req.body;
   books.push(newPost);
   res.json({
     status: "success",
-    message: "Book craete successfully",
+    message: "Book create successfully",
     data: books,
   });
 });
 //delete a book
 app.delete("/books/:id", (req, res) => {
-  const id = req.params.id;
+  const id = parseInt(req.params.id);
   console.log(id);
   const afterdeleteBook = books.filter((book) => book.id !== id);
   console.log(afterdeleteBook);
@@ -80,3 +81,7 @@ app.delete("/books/:id", (req, res) => {
 app.listen(PORT, function () {
   console.log("Server is running at port no 8082");
 });
+
+//not update
+
+//I have done create delte and fetch all and certain book

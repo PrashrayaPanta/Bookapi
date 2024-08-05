@@ -1,0 +1,21 @@
+{
+  "name": "book-api",
+  "version": "2.0.1",
+  "description": "simple apifor a book without db",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "Prashraya Panta",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
